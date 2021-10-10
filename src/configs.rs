@@ -8,8 +8,14 @@ pub struct ServerConfig {
 }
 
 #[derive(Deserialize)]
+pub struct PgConfig {
+    pub url: String,
+}
+
+#[derive(Deserialize)]
 pub struct Config {
     pub server: ServerConfig,
+    pub pg: PgConfig,
 }
 
 impl Config {
